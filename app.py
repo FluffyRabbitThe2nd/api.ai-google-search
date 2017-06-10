@@ -64,7 +64,7 @@ def processRequest(req):
 
 
 def google_search(search_term, api_key, cse_id, **kwargs):
-    service = build("customsearch", "v1", developerKey=AIzaSyBxxF6f_Js8U1vb--_WHMD2DjRhe-SNf8E)
+    service = build("customsearch", "v1", developerKey="AIzaSyBxxF6f_Js8U1vb--_WHMD2DjRhe-SNf8E")
     res = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
     return res['items']
 
