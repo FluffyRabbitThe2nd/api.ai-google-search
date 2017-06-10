@@ -52,8 +52,8 @@ def processRequest(req):
     searchString = "robot %s" % searchstring
 
     # KEYS SHOULDNT BE DISPLAYED
-    my_api_key = ""
-    my_cse_id = ""
+    my_api_key = "AIzaSyCc14Uc_omtGNSFxKAGEJwEwRHD-eGRUx8"
+    my_cse_id = "010875199908990354433:exsxftzngho"
     searchResults = google_search(searchString, my_api_key, my_cse_id, num=1)    # search for the topic
 
     if searchResults is None:
@@ -64,7 +64,7 @@ def processRequest(req):
 
 
 def google_search(search_term, api_key, cse_id, **kwargs):
-    service = build("customsearch", "v1", developerKey=api_key)
+    service = build("customsearch", "v1", developerKey=AIzaSyBxxF6f_Js8U1vb--_WHMD2DjRhe-SNf8E)
     res = service.cse().list(q=search_term, cx=cse_id, **kwargs).execute()
     return res['items']
 
